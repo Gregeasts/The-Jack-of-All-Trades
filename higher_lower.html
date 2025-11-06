@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Higher or Lower</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+  <div id="top-buttons">
+    <button id="play-music-btn">Play Music</button>
+    <button id="home-btn" class="home-btn">Home</button>
+  </div>
+  
+  <div class="container">
+    <h1>Higher or Lower</h1>
+    
+
+    <audio id="bg-music" src="assets/background_music.mp3" loop></audio>
+    
+    <!-- Main card -->
+    <div id="card-container">
+        
+        <img id="current-card" class="card" src="assets/BACK.png" alt="Card">
+        
+    </div>
+    <div id="previous-cards" class="previous-cards"></div>
+
+
+    <!-- Previous cards stack -->
+    
+
+  <div class="buttons">
+    <button id="higher-btn">Higher</button>
+    <button id="lower-btn">Lower</button>
+    <button id="reset-btn" style="display:none;">Restart</button>
+  </div>
+  
+  <p id="message"></p>
+  <p>Score: <span id="score">0</span></p>
+  <script src="script-hl.js"></script>
+</body>
+</html>

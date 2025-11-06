@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-align: center;
+  background: radial-gradient(circle at center, #1b5e20 0%, #0d3b12 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 30px 50px;
+  max-width: 600px;
+  margin: 20px;
+}
+/* ===== Bank & Betting Section ===== */
+.bank-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #0b3d0b, #116611);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  font-family: 'Arial Black', sans-serif;
+  color: #FFD700; /* gold text */
+  text-align: center;
+}
+
+.bank-container p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+#bet-input {
+  width: 80px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 2px solid #FFD700;
+  background-color: #003300;
+  color: #FFD700;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#bet-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+#place-bet-btn {
+  padding: 7px 15px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#place-bet-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #FFD700;
+}
+
+#place-bet-btn:disabled {
+  background: #555;
+  color: #ccc;
+  cursor: not-allowed;
+  transform: scale(1);
+  box-shadow: none;
+}
+
+/* Optional: glow effect when bank changes */
+#bank-amount {
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+#bank-amount.glow {
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FFD700;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  text-shadow: 0 0 10px #00ff88;
+  letter-spacing: 1px;
+}
+#top-buttons{
+    align-items: center;
+    margin-top: 20px;
+}
+#card-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.card {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.previous-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+  height: 100px;
+ 
+}
+@keyframes cardWobble {
+  0%   { transform: rotate(0deg) scale(1); }
+  20%  { transform: rotate(-3deg) scale(1.02); }
+  40%  { transform: rotate(3deg) scale(1.02); }
+  60%  { transform: rotate(-2deg) scale(1.01); }
+  80%  { transform: rotate(2deg) scale(1.01); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.wobble {
+  animation: cardWobble 0.4s ease;
+}
+
+.previous-cards img {
+  width: 80px;
+  border-radius: 8px;
+  opacity: 0.9;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  transform: rotate(var(--rotation, 0deg)) translateY(var(--offset, 0px));
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.previous-cards img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: linear-gradient(145deg, #009688, #00796b);
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 12px 28px;
+  margin: 0 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(145deg, #00bfa5, #009688);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+#reset-btn {
+  background: linear-gradient(145deg, #ff5252, #d32f2f);
+}
+
+#message {
+  font-size: 1.1em;
+  margin-top: 20px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+@keyframes score-pulse {
+  0% { text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88; }
+  50% { text-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88, 0 0 60px #00ff88; }
+  100% { text-shadow: 0 0 5px #00ff88, 0 0 10px #00ff88, 0 0 20px #00ff88; }
+}
+
+#score {
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 5px #00ff88;
+  transition: all 0.3s ease;
+}
+
+#score.pulse {
+  animation: score-pulse 0.6s ease;
+}
+.menu-page {
+  background: radial-gradient(circle at center, #1b5e20 0%, #0d3b12 100%);
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.menu-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("assets/felt_texture.png");
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.menu-page h1 {
+  font-size: 3em;
+  text-shadow: 0 0 20px #00ff88;
+  margin-bottom: 0.3em;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #c8ffc8;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
+  margin-bottom: 2em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-btn {
+  display: inline-block;
+  background: linear-gradient(145deg, #009688, #00796b);
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease-in-out;
+}
+
+.menu-btn:hover {
+  background: linear-gradient(145deg, #00bfa5, #009688);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.menu-btn.secondary {
+  background: linear-gradient(145deg, #8e24aa, #6a1b9a);
+}
+
+.menu-btn.secondary:hover {
+  background: linear-gradient(145deg, #ab47bc, #8e24aa);
+}
+
+footer {
+  margin-top: 2em;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+.hand-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.cards img {
+  width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}

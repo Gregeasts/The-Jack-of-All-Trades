@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack - The Jack of All Trades</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bg-music1" src="assets/background_music.mp3" loop></audio>
+  <div id="top-buttons">
+    <button id="play-music-btn1">Play Music</button>
+    <button id="home-btn" class="home-btn">Home</button>
+  </div>
+  
+  
+  <div class="container">
+    <h1>21 !</h1>
+    <div class="bank-container">
+      <p>Bank: $<span id="bank-amount">1000</span></p>
+      <label for="bet-input">Bet Amount: </label>
+      <input type="number" id="bet-input" min="1" step="1">
+      <button id="place-bet-btn">Place Bet</button>
+    </div>
+
+    <!-- Player cards -->
+    <div class="hand-container">
+      <h2>Player</h2>
+      <div id="player-cards" class="cards"></div>
+      <p>Score: <span id="player-score">0</span></p>
+    </div>
+
+    <!-- Dealer/Robot cards -->
+    <div class="hand-container">
+      <h2>Dealer</h2>
+      <div id="dealer-cards" class="cards"></div>
+      <p>Score: <span id="dealer-score">0</span></p>
+    </div>
+
+    <!-- Controls -->
+    <div class="buttons">
+      <button id="hit-btn">Hit</button>
+      <button id="stand-btn">Stand</button>
+      <button id="reset-btn" style="display:none;">Restart</button>
+    
+    </div>
+
+    <p id="message"></p>
+
+
+  </div>
+
+  <script src="script-twentyone.js"></script>
+</body>
+</html>
