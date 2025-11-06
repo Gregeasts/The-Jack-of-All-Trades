@@ -2,7 +2,7 @@ The Jack of All Trades - Card Games
 
 ## Overview
 
-This project contains a set of web-based card games built as part of a software engineering placement task in my application for a role within Hawk-Eye Innovations. T
+This project contains a set of web-based card games built as part of a software engineering placement task in my application for a role within Hawk-Eye Innovations. 
 
 Included games:  
 1. **Higher or Lower** – Guess whether the next card is higher or lower than the current one.  
@@ -13,7 +13,7 @@ Included games:
 
 - **Animations and sounds** were added to enhance user experience and make the game feel more interactive and lively.  
 - **Multi-round betting** was implemented to add a layer of strategy and replayability.  
-- **Dealer AI** for Blackjack uses a simple threshold system to mimic realistic casino behavior.  
+- **Dealer AI** for 21 uses a simple threshold system. 
 - GUI chosen over CLI to demonstrate front-end skills and creativity.
 
 ### Possible Improvements
