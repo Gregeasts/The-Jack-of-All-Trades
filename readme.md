@@ -18,7 +18,7 @@ Included games:
 
 ### Possible Improvements
 
-- Implement **more sophisticated dealer AI** for Blackjack.  
+- Implement **more sophisticated AI** for twenty one
 - Include **statistics tracking** for win/loss ratios.  
 - Add alternative game modes
 
