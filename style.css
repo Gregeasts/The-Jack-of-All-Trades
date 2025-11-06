@@ -307,3 +307,67 @@ footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
 }
+
+.opponent-hand-container, .player-hand-container {
+  margin: 20px 0;
+}
+
+.hand img {
+  width: 80px;
+  height: 110px;
+  margin-right: -20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hand img:hover {
+  transform: translateY(-10px);
+}
+
+/* Table layout */
+.table-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 20px 0;
+}
+
+.pile {
+  width: 120px;
+  height: 160px;
+  position: relative;
+  cursor: pointer;
+}
+
+.pile img {
+  width: 100px;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+/* Card animations */
+.card-animate {
+  transform: translateY(-50px) rotate(-10deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.card-animate.show {
+  transform: translateY(0) rotate(0deg);
+  opacity: 1;
+}
+
+.selected {
+  transform: translateY(-20px) scale(1.1);
+  border: 2px solid gold;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}

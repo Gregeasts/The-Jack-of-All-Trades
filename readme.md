@@ -7,6 +7,7 @@ This project contains a set of web-based card games built as part of a software 
 Included games:  
 1. **Higher or Lower** – Guess whether the next card is higher or lower than the current one.  
 2. **21!** – Play against a simple dealer AI with multi-round betting.  
+3. **The Jack** - An original game with the Jack as the main card involved!
 
 ## Project Decisions
 

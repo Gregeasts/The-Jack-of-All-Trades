@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Jack - The Jack of All Trades</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bg-music-jack" src="assets/background_music.mp3" loop></audio>
+  <div id="top-buttons">
+    <button id="play-music-btn-jack">Play Music</button>
+    <button id="home-btn-jack">Home</button>
+  </div>
+
+  <div class="container">
+    <h1>The Jack</h1>
+
+    <!-- Opponent Hand -->
+    <div class="opponent-hand-container">
+      <h2>Opponent</h2>
+      <div id="opponent-hand" class="hand"></div>
+    </div>
+
+    <!-- Table Piles -->
+    <div class="table-container">
+      <div id="pile-up" class="pile">
+        <h2>Face Up Pile</h2>
+      </div>
+      <div id="pile-down" class="pile">
+        <h2>Face Down Pile</h2>
+      </div>
+    </div>
+
+    <!-- Player Hand -->
+    <div class="player-hand-container">
+      <h2>Your Hand</h2>
+      <div id="player-hand" class="hand"></div>
+    </div>
+
+    <button id="reset-btn" style="display:none;">Restart</button>
+    <p id="message"></p>
+  </div>
+
+  <script src="script-thejack.js"></script>
+</body>
+</html>
